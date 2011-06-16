@@ -3,6 +3,8 @@ body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
+	background: #000;
+	color: #fff;
 }
 
 
@@ -10,15 +12,16 @@ body, p, ol, ul, td {
 
 
 #question{text-align :center;  margin-top: 200px}
+#question h1{font-size: 60px; padding-bottom: 100px}
 
 #answers ul{list-style-type: none; padding: 0; margin: 0}
 #answers li{display: inline-block; padding: 0 20px}
 
 #results div{display: inline-block; width: 100px; background-color: orange}
 #results {position: relative; padding-top: 100px}
-#results span{position: relative; top: -20px}
+#results span{position: relative; top: -30px}
 /* background:url('/images/button_bg.jpg') repeat-x */
-.button, input.button{color: #0F3969; width: auto; border:3px solid #0F3969; background-color: #BFD9F5; font: bold 14px Helvetica Neue,Arial,Sans-serif; display:block; height: 34px; border-radius: 5px; -moz-border-radius: 5px; cursor: pointer; padding: 0 20px ; text-decoration: none;}
+.button, input.button{color: #0F3969; width: auto; border:3px solid #0F3969; background-color: #BFD9F5; font: bold 18px Helvetica Neue,Arial,Sans-serif; display:block; height: 34px; border-radius: 5px; -moz-border-radius: 5px; cursor: pointer; padding: 0 40px ; text-decoration: none;}
 a.button{display: inline-block; padding-top: 7px; height: 27px;}
 .button:hover, a.button:hover{background-color: #0F3969; color: #BFD9F5; border-color: #BFD9F5; text-decoration :none}
 

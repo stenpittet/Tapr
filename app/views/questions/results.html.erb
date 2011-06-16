@@ -5,7 +5,7 @@
 
 	<div id="results">
 		<% @answers.each do |answer| %>
-			<div style="border: 1px solid red; height:<%=@prct[answer.id] + 30%>px;">
+			<div style="border: 3px solid #fff; height:<%=@prct[answer.id] + 30%>px;">
 				<span><%= answer.content %></span>
 			</div>
 		<% end %>
