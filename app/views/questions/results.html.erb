@@ -1,0 +1,17 @@
+<div id="question">
+	<p id="notice"><%= notice %></p>
+
+	<h1><%=@question.content%></h1>
+
+	<div id="results">
+		<% @answers.each do |answer| %>
+			<div style="border: 1px solid red; height:<%=@prct[answer.id] + 30%>px;">
+				<span><%= answer.content %></span>
+			</div>
+		<% end %>
+	</div>
+	<p>
+		<%=link_to 'Back to the question', @question, :class => 'button'%>
+	</p>
+</div>
+

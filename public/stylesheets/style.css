@@ -1,0 +1,31 @@
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+
+.question_actions{position:absolute; top: 10px; right: 10px; font-size: 10px }
+
+
+#question{text-align :center;  margin-top: 200px}
+
+#answers ul{list-style-type: none; padding: 0; margin: 0}
+#answers li{display: inline-block; padding: 0 20px}
+
+#results div{display: inline-block; width: 100px; background-color: orange}
+#results {position: relative; padding-top: 100px}
+#results span{position: relative; top: -20px}
+/* background:url('/images/button_bg.jpg') repeat-x */
+.button, input.button{color: #0F3969; width: auto; border:3px solid #0F3969; background-color: #BFD9F5; font: bold 14px Helvetica Neue,Arial,Sans-serif; display:block; height: 34px; border-radius: 5px; -moz-border-radius: 5px; cursor: pointer; padding: 0 20px ; text-decoration: none;}
+a.button{display: inline-block; padding-top: 7px; height: 27px;}
+.button:hover, a.button:hover{background-color: #0F3969; color: #BFD9F5; border-color: #BFD9F5; text-decoration :none}
+
+
+
+a{text-decoration: none; color: #1c6ca4;}
+a:hover{text-decoration: underline;}
+
+th{background-color: #eee; padding: 2px 10px}
+td{padding: 2px 10px}
