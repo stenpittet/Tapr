@@ -2,14 +2,26 @@
 	<p id="notice"><%= notice %></p>
 
 	<h1><%=@question.content%></h1>
-
-	<div id="results">
+	<center>
+	<table id="results" cellpadding="0" cellspacing="0" valign="bottom">
+		<tr valign="bottom">
 		<% @answers.each do |answer| %>
-			<div style="border: 3px solid #fff; height:<%=@prct[answer.id] + 30%>px;">
-				<span><%= answer.content %></span>
-			</div>
+			<td><div style="border: 3px solid #fff; height:<%=@prct[answer.id] %>px;"></div></td>
 		<% end %>
-	</div>
+		</tr>
+		<tr>
+		<% @answers.each do |answer| %>
+			<td>
+				<% if answer.content =~ /mood_[a-z]/ %>
+					<%=image_tag('/images/' + answer.content + '.jpg')%>
+				<% else %>
+					<span><%= answer.content %></span>
+				<% end %>
+			</td>
+		<% end %>
+		</tr>
+	</table>
+	</center>
 	<p>
 		<%=link_to 'Back to the question', @question, :class => 'button'%>
 	</p>

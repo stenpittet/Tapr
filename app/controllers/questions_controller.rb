@@ -6,7 +6,7 @@ class QuestionsController < ApplicationController
     
     @prct = []
     @answers.each do |a|
-      @prct[a.id] = @question.votes_count > 0 ? (a.votes_count*100 / @question.votes_count)  : 0;
+      @prct[a.id] = @question.votes_count > 0 ? (a.votes_count*300 / @question.votes_count)  : 0;
     end
     
     respond_to do |format|
