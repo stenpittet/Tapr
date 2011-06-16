@@ -6,7 +6,13 @@
 	<div id="answers">
 		<ul>
 			<% @answers.each do |answer| %>
-				<li><%=link_to answer.content, vote_answer_path(answer), :class => 'button' %></li>
+				<li>
+					<% if answer.content =~ /mood_[a-z]/ %>
+						<%=link_to image_tag('/images/' + answer.content + '.jpg'), vote_answer_path(answer)%>
+					<% else %>
+						<%=link_to answer.content, vote_answer_path(answer), :class => 'button' %>
+					<% end %>
+				</li>
 			<% end %>
 		</ul>
 	</div>
