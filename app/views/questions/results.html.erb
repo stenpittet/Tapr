@@ -15,7 +15,7 @@
 				<% if answer.content =~ /mood_[a-z]/ %>
 					<%=image_tag('/images/' + answer.content + '.jpg')%>
 				<% else %>
-					<span><%= answer.content %></span>
+					<span><%= answer.content %> (<%= answer.votes_count %>)</span>
 				<% end %>
 			</td>
 		<% end %>

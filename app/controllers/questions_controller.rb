@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
   # Display the results
   def results
     @question = Question.find(params[:id])
-    @answers  = @question.answers
+    @answers  = @question.answers.all(:order => 'ID asc')
     
     @prct = []
     @answers.each do |a|
@@ -30,7 +30,8 @@ class QuestionsController < ApplicationController
   # GET /questions/1.xml
   def show
     @question = Question.find(params[:id])
-    @answers = @question.answers
+    @answers = @question.answers.all(:order => 'ID asc')
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @question }
