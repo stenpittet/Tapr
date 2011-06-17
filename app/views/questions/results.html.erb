@@ -22,8 +22,12 @@
 		</tr>
 	</table>
 	</center>
-	<p>
+	<!--<p>
 		<%=link_to 'Back to the question', @question, :class => 'button'%>
 	</p>
+	-->
+	<script type="text/javascript">
+		setTimeout(function() { $(location).attr('href','<%=question_path(@question)%>'); }, 2000);
+	</script>
 </div>
 
