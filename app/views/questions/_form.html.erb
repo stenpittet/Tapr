@@ -19,6 +19,10 @@
 	<%= f.label :content, 'Text of the question'  %><br />
 	<%= f.text_field :content %>
 </p>
+<p>
+	<%= f.label :content, 'Redirect to results after vote'  %><br />
+	<%= f.check_box :redirect_results %>
+</p>
 
   <div class="actions">
     <%= f.submit %>

@@ -14,6 +14,8 @@ Tapr::Application.routes.draw do
     resources :answers
     member do
       get 'results'
+      get 'results_perm'
+      get 'voted'
     end
   end
 

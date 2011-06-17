@@ -10,7 +10,11 @@ class AnswersController < ApplicationController
       @answer.save
       @question.save
     end
-    redirect_to (results_question_path(@question))
+    if @question.redirect_results
+      redirect_to (results_question_path(@question))
+    else
+      redirect_to (voted_question_path(@question))
+    end
   end
   
   # GET /answers

@@ -1,6 +1,23 @@
 class QuestionsController < ApplicationController
   # Display the results
+  def voted
+  end
   def results
+    @question = Question.find(params[:id])
+    @answers  = @question.answers.all(:order => 'ID asc')
+    
+    @prct = []
+    @answers.each do |a|
+      @prct[a.id] = @question.votes_count > 0 ? (a.votes_count*300 / @question.votes_count)  : 0;
+    end
+    
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @question }
+    end
+  end
+  
+  def results_perm
     @question = Question.find(params[:id])
     @answers  = @question.answers.all(:order => 'ID asc')
     
